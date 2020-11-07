@@ -28,7 +28,13 @@
 /* styles */
 html {
   font-size: 16px;
-  background: #eee;
+  background: hsl(0, 0%, 98%);
+}
+
+body {
+  background-image: url(../img/bg-top-left.svg), url(../img/bg-bottom-right.svg);
+  background-position: -10% 0, 110% 100%;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -49,10 +55,12 @@ html {
 .illustration {
   border: 0.6rem solid #fff;
   border-radius: 2rem;
-  max-width: 19rem;
+  max-width: 18.4rem;
   overflow: hidden;
   position: relative;
   background: hsl(270, 20%, 96%);
+  pointer-events: none;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
 }
 
 .illustration::before {
@@ -227,4 +235,22 @@ html {
 .input__field::placeholder {
   font-size: 0.6rem;
   color: hsl(206, 6%, 79%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content__title {
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+  font-weight: var(--font-medium);
+  color: hsl(271, 36%, 24%);
+}
+
+.content__text {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.6;
 }
