@@ -33,16 +33,11 @@ html {
 
 body {
   background-image: url(../img/bg-top-left.svg), url(../img/bg-bottom-right.svg);
-  background-position: -10% 0, 110% 100%;
   background-repeat: no-repeat;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
   min-height: 100vh;
-  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -50,6 +45,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .illustration {
@@ -241,6 +237,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2rem;
 }
 
 .content__title {
@@ -253,4 +250,31 @@ body {
 .content__text {
   color: hsl(270, 7%, 64%);
   line-height: 1.6;
+}
+
+@media screen and (min-width: 930px) {
+  body {
+    background-position: -10% 0, 110% 100%;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 929px) {
+  body {
+    background-position: -10% -40%, 110% 140%;
+  }
+
+  .wrapper {
+    max-width: 420px;
+    min-width: 320px;
+  }
+
+  .content {
+    text-align: center;
+  }
 }
