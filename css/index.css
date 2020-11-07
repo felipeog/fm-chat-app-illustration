@@ -124,7 +124,7 @@ html {
   padding: 0.6rem 0.8rem;
   border-radius: 1rem;
   font-size: 0.6rem;
-  width: 60%;
+  max-width: 60%;
 }
 
 .message + .message {
@@ -165,11 +165,12 @@ html {
 
 .message--photos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 3rem);
   grid-gap: 0.6rem;
   padding: 0;
   background: none;
   box-shadow: none;
+  max-width: unset;
 }
 
 .message--option {
@@ -177,6 +178,8 @@ html {
   align-items: center;
   color: #fff;
   background: var(--bg-gradient);
+  width: 80%;
+  max-width: unset;
 }
 
 .message--option::before {
